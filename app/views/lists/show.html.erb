@@ -1,0 +1,10 @@
+<h1>Show is working fine</h1>
+
+<p><%= @list.name %></p>
+<% @list.bookmarks.each do |b| %>
+  <p><%= b.comment %></p>
+  <%= link_to "delete me kk", bookmark_path(b), data: { turbo_method: :delete, turbo_confirm: "Are you sure sweetie"} %>
+<% end %>
+
+<%= link_to "Add new bookmark", new_list_bookmark_path(@list) %>
+<%= link_to "Go home hunny", lists_path %>

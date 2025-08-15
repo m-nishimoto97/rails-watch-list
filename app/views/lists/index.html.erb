@@ -4,7 +4,9 @@
     <% @lists.each do |l| %>
       <li>
         <div class="card">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="list-image" />
+          <% if l.photo.attached? %>
+            <%= cl_image_tag l.photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
           <%= link_to "#{l.name}", list_path(l[:id]), class: "list-link" %>
         </div>
       </li>
@@ -12,4 +14,5 @@
   </ul>
 
   <%= link_to 'Create a new list <3', new_list_path, class: "new-list-button" %>
+
 </div>

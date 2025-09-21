@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/SuzukiRyuichiro/ruby_llm.git
+  revision: a8f00550865b8c11ff8b7b5f3dfa7316151c0c4d
+  specs:
+    ruby_llm (1.6.4)
+      base64
+      event_stream_parser (~> 1)
+      faraday (>= 1.10.0)
+      faraday-multipart (>= 1)
+      faraday-net_http (>= 1)
+      faraday-retry (>= 1)
+      marcel (~> 1.0)
+      zeitwerk (~> 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -275,15 +289,6 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.4)
-    ruby_llm (1.6.4)
-      base64
-      event_stream_parser (~> 1)
-      faraday (>= 1.10.0)
-      faraday-multipart (>= 1)
-      faraday-net_http (>= 1)
-      faraday-retry (>= 1)
-      marcel (~> 1.0)
-      zeitwerk (~> 2)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -354,7 +359,7 @@ DEPENDENCIES
   rails (~> 7.1.5, >= 7.1.5.1)
   rails-controller-testing
   rspec-rails
-  ruby_llm
+  ruby_llm!
   sassc-rails
   simple_form
   sprockets-rails

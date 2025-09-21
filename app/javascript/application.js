@@ -4,3 +4,6 @@ import "controllers"
 
 import "@popperjs/core";
 import "bootstrap";
+
+// Custom Javascript
+import "./custom/chatbox";

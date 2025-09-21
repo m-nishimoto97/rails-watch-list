@@ -3,6 +3,7 @@
 <p><%= @list.name %></p>
 <% @list.bookmarks.each do |b| %>
   <p><%= b.comment %></p>
+  <p><%= b.summary %>
   <%= link_to "delete me kk", bookmark_path(b), data: { turbo_method: :delete, turbo_confirm: "Are you sure sweetie"} %>
 <% end %>
 

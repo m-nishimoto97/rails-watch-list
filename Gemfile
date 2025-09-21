@@ -70,4 +70,4 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "sassc-rails"
 gem "cloudinary"
-gem 'ruby_llm'
+gem "ruby_llm", git: 'https://github.com/SuzukiRyuichiro/ruby_llm.git'

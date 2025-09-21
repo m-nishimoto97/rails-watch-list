@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: linear-gradient(45deg, #fdf0ff, #ffecee, #f0eaea);
+  height: 100%;
+  overflow-y: hidden;
+}

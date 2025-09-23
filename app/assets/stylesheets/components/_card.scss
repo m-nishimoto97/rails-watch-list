@@ -5,6 +5,7 @@
   list-style: none;
   margin: 36px auto;
   justify-content: center;
+  padding: 0;
 }
 
 .card {
@@ -21,6 +22,11 @@
   overflow: hidden;
   width: 300px;
   border-radius: 1rem;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
 
   img {
     width: 100%;

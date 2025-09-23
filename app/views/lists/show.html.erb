@@ -1,11 +1,15 @@
-<h1>Show is working fine</h1>
+<h1 style="text-align:center; padding: 8px 0px;"><%= @list.name %></h1>
 
-<p><%= @list.name %></p>
-<% @list.bookmarks.each do |b| %>
-  <p><%= b.comment %></p>
-  <p><%= b.summary %>
-  <%= link_to "delete me kk", bookmark_path(b), data: { turbo_method: :delete, turbo_confirm: "Are you sure sweetie"} %>
-<% end %>
+<div class="movie-list">
+    <% @list.bookmarks.each do |b| %>
+      <div class="list-card">
+        <h3><strong><%= b.movie.title %></strong></h3>
+        <p><strong>Summary: </strong><%= b.summary %></p>
+        <p><strong>Comments: </strong> <%= b.comment %></p>
+        <%= link_to "Delete me!", bookmark_path(b), class: "delete-button", data: { turbo_method: :delete, turbo_confirm: "Are you sure sweetie" } %>
+      </div>
+    <% end %>
 
-<%= link_to "Add new bookmark", new_list_bookmark_path(@list) %>
-<%= link_to "Go home hunny", lists_path %>
+    <%= link_to "Add new bookmark", new_list_bookmark_path(@list), style: "text-align: center;" %>
+    <%= link_to "Go Home hunny", lists_path, style: "text-align: center;" %>
+</div>
